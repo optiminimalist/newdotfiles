@@ -1,3 +1,73 @@
+" Use Vim defaults
+set nocompatible
+
+
+" =============================== Vundle Settings
+
+" Init
+set rtp+=~/.vim/bundle/vundle/
+call vundle#rc()
+Bundle 'gmarik/vundle'
+
+" Other bundles
+
+Bundle "altercation/vim-colors-solarized"
+Bundle "tpope/vim-fugitive"
+Bundle "scrooloose/syntastic"
+Bundle "kien/ctrlp.vim"
+
+
+" =============================== General Settings
+
+" Colorscheme
+set background=dark
+colorscheme solarized
+
+" Line numbers
+set number
+
+" Allow Backspace
+set backspace=indent,eol,start
+
+" Disable blinking cursor
+set gcr=a:blinkon0
+
+" Notify visually
+set visualbell
+
+" Show partial command in last line
+set showcmd
+
+" Show current mode in last line
+set showmode
+
+" Reload file automatically if it has been changed outside
+set autoread
+
+" Check if the file changed outside of vim
+autocmd CursorHold * checktime
+autocmd WinEnter * checktime
+autocmd BufWinEnter * checktime
+
+" Filepath completion
+set wildmenu
+set wildmode=list:longest
+
+" Stuff to ignore for completion
+set wildignore=*.o,*.obj
+set wildignore+=*DS_Store*
+set wildignore+=*.png,*.jpg,*.gif
+
+" Always show 5-lines of context
+set scrolloff=5
+
+" Set editor and file encoding to Unicode
+set encoding=utf-8
+set fileencoding=utf-8
+
+" Spellcheck on
+set spell
+
 
 " =============== Status Bar
 
