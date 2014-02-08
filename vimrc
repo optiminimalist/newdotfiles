@@ -1,4 +1,124 @@
 
+" =============== Status Bar
+
+" Always display
+set laststatus=2
+
+" Status bar display items
+" (left)  [filepath][+]
+" (right) [colnum],[linenum]/[total lines]
+set statusline=%f
+set statusline+=%m
+set statusline+=%=
+set statusline+=%c,
+set statusline+=%l/%L
+
+
+" =============================== Syntax
+
+" Filetype detection
+filetype on
+
+" Load filetype specific plugins
+filetype plugin on
+
+syntax enable
+
+" Show matching braces
+set showmatch
+
+
+" =============================== Search
+
+" Case insensitive
+set ignorecase
+
+" but respect explict Upper-case
+set smartcase
+
+" Highlight matches
+set hlsearch
+
+" Search while typing
+set incsearch
+
+
+" =============================== Swap and Backup
+
+" Don't use any swap files
+set noswapfile
+
+" or writing to a backup file
+set nowb
+
+" or backup file
+set nobackup
+
+
+" =============================== Persistent Undo
+
+" Directory for undo file
+silent !mkdir ~/.vim/undos > /dev/null 2>&1
+set undodir=~/.vim/undos
+set undofile
+
+
+" =============================== Indentation
+
+" Load filetype indent plugins
+filetype indent on
+
+" Carry-over indentation when starting a new line
+set autoindent
+
+" Indent new line based on previous line's syntax
+set smartindent
+
+" Use shiftwidth when in line beginnings
+set smarttab
+
+" Wrap when displaying long lines
+set wrap
+
+" Wrap intelligently
+set linebreak
+
+" Display tabs, trailing spaces, eol, wrap chars visually
+set listchars=tab:»-,trail:·,eol:$,extends:»,precedes:«
+
+" Display trailing whitespace
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
+autocmd BufWinEnter * match ExtraWhitespace /\s\+$/
+autocmd InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+autocmd InsertLeave * match ExtraWhitespace /\s\+$/
+autocmd BufWinLeave * call clearmatches()
+
+" Tabs are 2-spaces
+set tabstop=2
+
+" Use 2-spaces when shifting
+set shiftwidth=2
+
+" Tabs are 2-spaces
+set softtabstop=2
+
+" Convert tabs to spaces
+set expandtab
+
+
+" =============================== Folds
+
+" Don't fold by default
+set nofoldenable
+
+" Based on indent
+set foldmethod=indent
+
+" Max nesting is 3-levels deep
+set foldnestmax=3
+
+
 " =============== Yelp-specific settings
 
 function YelpSettings()
