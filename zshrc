@@ -7,8 +7,6 @@ ZSH_THEME="mluck"
 
 source $ZSH/oh-my-zsh.sh
 
-export EDITOR=vim
-
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
