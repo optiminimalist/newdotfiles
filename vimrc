@@ -21,7 +21,7 @@ Bundle "kien/ctrlp.vim"
 
 " Colorscheme
 set background=dark
-colorscheme solarized
+" colorscheme solarized
 
 " Line numbers
 set number
@@ -65,8 +65,8 @@ set scrolloff=5
 set encoding=utf-8
 set fileencoding=utf-8
 
-" Spellcheck on
-set spell
+" Spellcheck off 
+set nospell
 
 
 " =============== Status Bar
