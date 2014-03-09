@@ -17,3 +17,5 @@
 	log = false
 [credential]
 	helper = osxkeychain
+[core]
+	editor = vim
