@@ -6,7 +6,8 @@ plugins=(git)
 ZSH_THEME="mluck"
 
 source $ZSH/oh-my-zsh.sh
-
+bindkey -v
+bindkey "^R" history-incremental-search-backward
 alias -g ...='../..'
 alias -g ....='../../..'
 alias -g .....='../../../..'
